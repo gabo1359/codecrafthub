@@ -4,11 +4,13 @@ A simple REST API to track courses you want to learn
 """
 
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 import json
 import os
 from datetime import datetime
 
 app = Flask(__name__)
+CORS(app)
 
 # Configuration
 DATA_FILE = 'courses.json'
